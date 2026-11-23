@@ -39,10 +39,11 @@
             font-weight: bold;
         }
 
-        /* Style text input fields */
-        input[type="text"],
+        /* Style text fields and dropdown menus */
+input[type="text"],
 input[type="email"],
-select {            width: 100%;
+select {
+   	    width: 100%;
             padding: 10px;
             box-sizing: border-box;
             border: 1px solid #ccc;
@@ -142,6 +143,12 @@ select {            width: 100%;
 <input type="hidden"
        name="_subject"
        value="Project 2 Registration Form">
+
+<!-- Store all selected contact methods for the email -->
+    <input type="hidden"
+           id="selectedContactMethods"
+           name="selectedContactMethods"
+           value="">
 
             <!-- First Name -->
             <label for="firstName">First Name:</label>

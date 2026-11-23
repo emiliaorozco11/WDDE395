@@ -173,7 +173,17 @@ function submit(event) {
     // Check whether the form has any validation errors.
     if (errors.length === 0) {
 
-        // Send the form only when all information is valid.
+        // Create an array of selected contact method names.
+        const selectedContacts = Array.from(
+            contactMethods,
+            checkbox => checkbox.value
+        );
+
+        // Put all selected methods into one text value.
+        document.querySelector("#selectedContactMethods").value =
+            selectedContacts.join(", ");
+
+        // Send the form after all validation checks pass.
         form.submit();
 
     } else {
@@ -181,6 +191,8 @@ function submit(event) {
         // Display validation errors in red.
         errorMessages.style.color = "#b91c1c";
     }
+
+    
 
 } // End of submit function.
 
