@@ -132,10 +132,10 @@ function submit(event) {
         // Add an error if no meal preference was selected.
         errors.push("Please select a meal preference.");
     }
-
-    // Find all contact methods that the user selected.
+ 
+    // Find all selected contact method checkboxes.
     const contactMethods = document.querySelectorAll(
-        'input[name="contactMethod"]:checked'
+        'input[type="checkbox"]:checked'
     );
 
     // Check whether at least 2 contact methods were selected.
